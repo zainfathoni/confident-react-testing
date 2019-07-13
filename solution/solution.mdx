@@ -201,3 +201,65 @@ import ToggleHooks from './ToggleHooks.js'
     }}
   />
 </Split>
+
+---
+
+## Demo 3
+
+### Make a mistake in Button event propagation
+
+---
+
+<CodeSurferColumnLayout sizes={[1, 1]}>
+
+<Step>
+  <Code
+    code={require('!!raw-loader!./Button.js').default}
+    focus="6[12:48]"
+    lang="jsx"
+    title="Careful Developer 🧐"
+    subtitle="Pass onClick props correctly"
+  />
+  <Code
+    code={require('!!raw-loader!./ButtonMistake.js').default}
+    focus="6[12:19]"
+    lang="jsx"
+    title="Careless Developer 🥴"
+    subtitle="Forget to pass onClick props"
+  />
+</Step>
+
+</CodeSurferColumnLayout>
+
+---
+
+## Test User ✅
+
+<Split>
+  <Image
+    src={require('file-loader!./demo-3-test-result.png')}
+    style={{
+      margin: 'auto',
+      height: '55vh',
+      width: '55vw',
+      backgroundPosition: 'right',
+      backgroundSize: 'contain',
+    }}
+  />
+  <Image
+    src={require('file-loader!./demo-3-test-coverage.png')}
+    style={{
+      margin: '0 auto 0 0',
+      height: '60vh',
+      width: '60vw',
+      backgroundPosition: 'left',
+      backgroundSize: 'contain',
+    }}
+  />
+</Split>
+
+---
+
+## End User 😡
+
+<Toggle />
