@@ -1,3 +1,5 @@
+import { Image } from '@mdx-deck/components'
+import { Split } from 'mdx-deck/layouts'
 import { CodeSurferLayout, Code } from 'code-surfer'
 import Toggle from './Toggle.js'
 
@@ -112,3 +114,29 @@ import Toggle from './Toggle.js'
     title="Test Toggle using Enzyme"
   />
 </CodeSurferLayout>
+
+---
+
+## Test Result
+
+<Split>
+  <Image
+    src={require('file-loader!./demo-1/toggle-shallow-test-result.png')}
+    style={{
+      margin: 'auto',
+      height: '30vh',
+      width: '30vw',
+      backgroundSize: 'contain',
+    }}
+  />
+  <Image
+    src={require('file-loader!./demo-1/toggle-shallow-test-coverage.png')}
+    style={{
+      margin: '0 auto 0 0',
+      height: '60vh',
+      width: '60vw',
+      backgroundPosition: 'left',
+      backgroundSize: 'contain',
+    }}
+  />
+</Split>
