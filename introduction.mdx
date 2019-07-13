@@ -31,3 +31,32 @@ import { Appear, Image, Notes } from "mdx-deck";
 ---
 
 # What this talk is _not_ 😅
+
+---
+
+# Outline
+
+- Intro
+- Problems
+  - Humans make mistakes
+  - New features tend to introduce regressions
+  - Machines don't make mistakes, ~~do they~~?
+- Solution
+  - Testing
+  - Test code against implementation code
+- Concepts
+  - Simple Addition Example
+  - Introducing Test Runner
+  - Introducing React Renderer
+- Walkthrough
+  - Test React using Enzyme
+  - Assert component instance's state
+- Test as a Third User <-- "aha" moment
+  - [The more your tests resemble the way your software is used, the more confidence they can give you.](https://twitter.com/kentcdodds/status/977018512689455106)
+  - Avoid [testing implementation details](https://kentcdodds.com/blog/testing-implementation-details)
+  - Test interfaces instead
+    - Props
+    - Rendered DOM
+  - [What should (and should not) be mocked](https://kentcdodds.com/blog/the-merits-of-mocking)
+- Recap
+- Outre
