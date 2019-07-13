@@ -1,0 +1,27 @@
+import { Appear } from 'mdx-deck'
+
+# Problems 😫
+
+<ul>
+  <Appear>
+    <li>Humans make mistakes 🤪</li>
+    <li>New features tend to introduce regressions 🧪</li>
+    <li>Machines don't make mistakes, ~~do they~~? 💯</li>
+  </Appear>
+</ul>
+
+---
+
+# Solution
+
+### (Test) Code vs (Implementation) Code
+
+---
+
+# 3 Users of Our Components
+
+| Users                                                            | Related Aspects                     |
+| ---------------------------------------------------------------- | ----------------------------------- |
+| End User                                                         | user interactions, i18n, a11y, etc. |
+| Developer                                                        | props, context, side effects, etc.  |
+| [Test User](<(https://kentcdodds.com/blog/avoid-the-test-user)>) | ???                                 |
