@@ -43,20 +43,28 @@ import { Appear, Image, Notes } from "mdx-deck";
   - Machines don't make mistakes, ~~do they~~?
 - Solution
   - Testing
-  - Test code against implementation code
+  - Code vs Code: test code against implementation code
 - Concepts
   - Simple Addition Example
   - Introducing Test Runner
   - Introducing React Renderer
+- Introducing [The Test User](https://kentcdodds.com/blog/avoid-the-test-user)
+  - 3 users of our components:
+    - End User --> user interactions, i18n, a11y, etc.
+    - Developer User --> props, context, side effects, etc.
+    - [The Test User](https://kentcdodds.com/blog/avoid-the-test-user) --> implementation details --> avoid it!
 - Walkthrough
   - Test React using Enzyme
-  - Assert component instance's state
-- Test as a Third User <-- "aha" moment
+  - Demonstrate common mistakes:
+    - Assert component instance's state
+    - Call component instance method directly
+  - Test React using React Testing Library
+  - Swap components <-- "aha" moment
+- Recap
   - [The more your tests resemble the way your software is used, the more confidence they can give you.](https://twitter.com/kentcdodds/status/977018512689455106)
   - Avoid [testing implementation details](https://kentcdodds.com/blog/testing-implementation-details)
   - Test interfaces instead
     - Props
     - Rendered DOM
   - [What should (and should not) be mocked](https://kentcdodds.com/blog/the-merits-of-mocking)
-- Recap
-- Outre
+- Outro
