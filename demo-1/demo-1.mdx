@@ -158,7 +158,9 @@ import ToggleFlipped from './ToggleFlipped.js'
 
 ---
 
-<CodeSurferLayout>
+<CodeSurferColumnLayout sizes={[1, 1]}>
+
+<Step>
   <Code
     code={require('!!raw-loader!./Toggle.js').default}
     focus="6[13:17],16[15:48]"
@@ -173,7 +175,9 @@ import ToggleFlipped from './ToggleFlipped.js'
     title="Flip toggle State Representation"
     subtitle="true ➡ Off | false ➡ On"
   />
-</CodeSurferLayout>
+</Step>
+
+</CodeSurferColumnLayout>
 
 ---
 

@@ -6,6 +6,7 @@ import {
   Code,
   Step,
 } from 'code-surfer'
+import ToggleFlipped from './ToggleFlipped.js'
 
 # Solution
 
@@ -69,3 +70,73 @@ import {
     title="Test Toggle using React Testing Library"
   />
 </CodeSurferLayout>
+
+---
+
+## Let's redo all our previous Demos!
+
+---
+
+## Demo 1
+
+### Flip `toggle` State Representation
+
+`true` ➡ Off
+
+`false` ➡ On
+
+---
+
+<CodeSurferColumnLayout sizes={[1, 1]}>
+
+<Step>
+  <Code
+    code={require('!!raw-loader!./Toggle.js').default}
+    focus="6[13:17],16[15:48]"
+    lang="jsx"
+    title="Flip toggle State Representation"
+    subtitle="true ➡ On | false ➡ Off"
+  />
+  <Code
+    code={require('!!raw-loader!./ToggleFlipped.js').default}
+    focus="6[13:16],16[16]"
+    lang="jsx"
+    title="Flip toggle State Representation"
+    subtitle="true ➡ Off | false ➡ On"
+  />
+</Step>
+
+</CodeSurferColumnLayout>
+
+---
+
+## End User 🆗
+
+<ToggleFlipped />
+
+---
+
+## Test User ✅
+
+<Split>
+  <Image
+    src={require('file-loader!./demo-1-test-result.png')}
+    style={{
+      margin: 'auto',
+      height: '40vh',
+      width: '40vw',
+      backgroundPosition: 'right',
+      backgroundSize: 'contain',
+    }}
+  />
+  <Image
+    src={require('file-loader!./demo-1-test-coverage.png')}
+    style={{
+      margin: '0 auto 0 0',
+      height: '60vh',
+      width: '60vw',
+      backgroundPosition: 'left',
+      backgroundSize: 'contain',
+    }}
+  />
+</Split>
