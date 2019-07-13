@@ -1,0 +1,33 @@
+import { Image } from '@mdx-deck/components'
+import { Split } from 'mdx-deck/layouts'
+import {
+  CodeSurferLayout,
+  CodeSurferColumnLayout,
+  Code,
+  Step,
+} from 'code-surfer'
+
+# Comparison
+
+## Test Toggle using React Testing Library
+
+---
+
+<CodeSurferColumnLayout sizes={[1, 1]}>
+
+<Step>
+  <Code
+    code={require('!!raw-loader!./Toggle.test.js').default}
+    focus="10:18"
+    lang="jsx"
+    title="Enzyme"
+  />
+  <Code
+    code={require('!!raw-loader!./ToggleHooks.test.js').default}
+    focus="9:17"
+    lang="jsx"
+    title="React Testing Library"
+  />
+</Step>
+
+</CodeSurferColumnLayout>
