@@ -1,0 +1,59 @@
+import { Image } from '@mdx-deck/components'
+import { Split } from 'mdx-deck/layouts'
+import {
+  CodeSurferLayout,
+  CodeSurferColumnLayout,
+  Code,
+  Step,
+} from 'code-surfer'
+import ToggleHooks from './ToggleHooks.js'
+
+# Demo 2
+
+## Implement Toggle Functional Component
+
+<ToggleHooks />
+
+---
+
+<CodeSurferLayout>
+  <Code
+    code={require('!!raw-loader!./ToggleHooks.0.js').default}
+    lang="jsx"
+    title="Implement Toggle Functional Component"
+  />
+  <Code
+    code={require('!!raw-loader!./ToggleHooks.1.js').default}
+    focus="1[17:24],5"
+    lang="jsx"
+    title="Implement Toggle Functional Component"
+    subtitle="toggle state"
+  />
+  <Code
+    code={require('!!raw-loader!./ToggleHooks.2.js').default}
+    focus="7:9"
+    lang="jsx"
+    title="Implement Toggle Functional Component"
+    subtitle="handleToggle function to switch the toggle"
+  />
+  <Code
+    code={require('!!raw-loader!./ToggleHooks.3.js').default}
+    focus="13[13:35]"
+    lang="jsx"
+    title="Implement Toggle Functional Component"
+    subtitle="Render toggle state"
+  />
+  <Code
+    code={require('!!raw-loader!./ToggleHooks.js').default}
+    focus="14[15:36]"
+    lang="jsx"
+    title="Implement Toggle Functional Component"
+    subtitle="Call handleToggle function"
+  />
+  <Code
+    code={require('!!raw-loader!./ToggleHooks.js').default}
+    focus="5,7:9,13[13:35],14[15:36]"
+    lang="jsx"
+    title="Implement Toggle Functional Component"
+  />
+</CodeSurferLayout>
