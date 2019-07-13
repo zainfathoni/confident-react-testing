@@ -57,3 +57,61 @@ import ToggleHooks from './ToggleHooks.js'
     title="Implement Toggle Functional Component"
   />
 </CodeSurferLayout>
+
+---
+
+## Swap Toggle with ToggleHooks
+
+---
+
+## End User 🆗
+
+<ToggleHooks />
+
+---
+
+<CodeSurferColumnLayout sizes={[1, 1]}>
+
+<Step title="Developer 🆗" subtitle="Simply swap the component name">
+  <Code
+    code={require('!!raw-loader!./App.js').default}
+    focus="2[23:28]"
+    lang="jsx"
+    subtitle="Before"
+  />
+  <Code
+    code={require('!!raw-loader!./AppHooks.js').default}
+    focus="2[23:33]"
+    lang="jsx"
+    subtitle="After"
+  />
+</Step>
+
+</CodeSurferColumnLayout>
+
+---
+
+## Test User ❌
+
+<Split>
+  <Image
+    src={require('file-loader!./toggle-shallow-test-failure-result.png')}
+    style={{
+      margin: 'auto',
+      height: '45vh',
+      width: '45vw',
+      backgroundPosition: 'right',
+      backgroundSize: 'contain',
+    }}
+  />
+  <Image
+    src={require('file-loader!./toggle-shallow-test-failure-coverage.png')}
+    style={{
+      margin: '0 auto 0 0',
+      height: '60vh',
+      width: '60vw',
+      backgroundPosition: 'left',
+      backgroundSize: 'contain',
+    }}
+  />
+</Split>

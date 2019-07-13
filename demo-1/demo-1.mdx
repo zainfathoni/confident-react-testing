@@ -187,12 +187,14 @@ import ToggleFlipped from './ToggleFlipped.js'
 
 <Step title="Developer 🆗">
   <Code
-    code={require('!!raw-loader!./App.txt').default}
+    code={require('!!raw-loader!./App.js').default}
+    focus="2,5[10:19]"
     lang="jsx"
     subtitle="Before"
   />
   <Code
-    code={require('!!raw-loader!./App.txt').default}
+    code={require('!!raw-loader!./App.js').default}
+    focus="2,5[10:19]"
     lang="jsx"
     subtitle="After"
   />
