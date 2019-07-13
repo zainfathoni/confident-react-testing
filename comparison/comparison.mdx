@@ -30,4 +30,101 @@ import {
   />
 </Step>
 
+<Step subtitle="What does it even mean? 🤷🏻‍♂️">
+  <Code
+    code={require('!!raw-loader!./Toggle.test.js').default}
+    focus="10"
+    lang="jsx"
+    title="Shallow rendering"
+  />
+  <Code
+    code={require('!!raw-loader!./ToggleHooks.test.js').default}
+    focus="9"
+    lang="jsx"
+    title="Deep rendering"
+  />
+</Step>
+
+<Step subtitle="Let's debug!">
+  <Code
+    code={require('!!raw-loader!./Toggle.test.0.js').default}
+    focus="11"
+    lang="jsx"
+    title="Shallow rendering"
+  />
+  <Code
+    code={require('!!raw-loader!./ToggleHooks.test.0.js').default}
+    focus="9[13:17],10"
+    lang="jsx"
+    title="Deep rendering"
+  />
+</Step>
+
 </CodeSurferColumnLayout>
+
+---
+
+### Shallow vs Deep Rendering
+
+<Split>
+  <Image
+    src={require('file-loader!./shallow-rendering-debug.png')}
+    style={{
+      margin: 'auto',
+      height: '50vh',
+      width: '50vw',
+      backgroundSize: 'contain',
+    }}
+  />
+  <Image
+    src={require('file-loader!./deep-rendering-debug.png')}
+    style={{
+      margin: '0 auto 0 0',
+      height: '50vh',
+      width: '50vw',
+      backgroundSize: 'contain',
+    }}
+  />
+</Split>
+
+---
+
+<CodeSurferColumnLayout sizes={[1, 1]}>
+
+<Step title="Testing Implementation Details">
+  <Code
+    code={require('!!raw-loader!./Toggle.test.js').default}
+    focus="12,17"
+    lang="jsx"
+    subtitle="Assert component's instance state"
+  />
+  <Code
+    code={require('!!raw-loader!./ToggleHooks.test.js').default}
+    focus="11:12,16:17"
+    lang="jsx"
+    subtitle="Assert user's perception"
+  />
+</Step>
+
+<Step title="Testing Implementation Details">
+  <Code
+    code={require('!!raw-loader!./Toggle.test.js').default}
+    focus="15"
+    lang="jsx"
+    subtitle="Call component's instance method directly"
+  />
+  <Code
+    code={require('!!raw-loader!./ToggleHooks.test.js').default}
+    focus="14"
+    lang="jsx"
+    subtitle="Try to mimic user's interaction behaviour"
+  />
+</Step>
+
+</CodeSurferColumnLayout>
+
+---
+
+# 🔑 Key Takeaway
+
+## ⚠️ Avoid Testing Implementation Details ️️⚠️
