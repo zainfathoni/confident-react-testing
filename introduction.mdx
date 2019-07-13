@@ -85,10 +85,7 @@ import { Appear, Image, Notes } from 'mdx-deck'
   - Make a mistake in Button onClick event propagation
     - Test User ✅
     - End User ❌
-  - Emphasis common mistakes:
-    - Assert component instance's state
-    - Call component instance method directly
-- Demo 3
+- Solution
   - Test using React Testing Library
   - Change `toggle` state representation
     - End User 🆗
@@ -98,6 +95,12 @@ import { Appear, Image, Notes } from 'mdx-deck'
     - End User 🆗
     - Developer 🆗
     - Test User ✅
+  - Make a mistake in Button onClick event propagation
+    - End User ❌
+    - Test User ❌
+  - Emphasis common mistakes:
+    - Assert component instance's state
+    - Call component instance method directly
   - Why?
     - Avoid testing implementation details <-- "aha" moment
 - Recap
