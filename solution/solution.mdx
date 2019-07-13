@@ -59,15 +59,22 @@ import ToggleMistake from './ToggleMistake.js'
     subtitle="Then click it! 🖱"
   />
   <Code
-    code={require('!!raw-loader!./Toggle.test.js').default}
-    focus="16:17"
+    code={require('!!raw-loader!./Toggle.test.5.js').default}
+    focus="14:15"
     lang="jsx"
     title="Test Toggle using React Testing Library"
     subtitle="Assert that the User now sees 👀 'On' instead of 'Off' text"
   />
   <Code
     code={require('!!raw-loader!./Toggle.test.js').default}
-    focus="2,8:17"
+    focus="2[18:24],6"
+    lang="jsx"
+    title="Test Toggle using React Testing Library"
+    subtitle="Clean up rendered DOM from the test"
+  />
+  <Code
+    code={require('!!raw-loader!./Toggle.test.js').default}
+    focus="2,6,9:17"
     lang="jsx"
     title="Test Toggle using React Testing Library"
   />
