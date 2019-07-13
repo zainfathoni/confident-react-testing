@@ -7,6 +7,7 @@ import {
   Step,
 } from 'code-surfer'
 import ToggleFlipped from './ToggleFlipped.js'
+import ToggleHooks from './ToggleHooks.js'
 
 # Solution
 
@@ -110,13 +111,13 @@ import ToggleFlipped from './ToggleFlipped.js'
 
 ---
 
-## End User 🆗
+### End User 🆗
 
 <ToggleFlipped />
 
 ---
 
-## Test User ✅
+### Test User ✅
 
 <Split>
   <Image
@@ -131,6 +132,66 @@ import ToggleFlipped from './ToggleFlipped.js'
   />
   <Image
     src={require('file-loader!./demo-1-test-coverage.png')}
+    style={{
+      margin: '0 auto 0 0',
+      height: '60vh',
+      width: '60vw',
+      backgroundPosition: 'left',
+      backgroundSize: 'contain',
+    }}
+  />
+</Split>
+
+---
+
+## Demo 2
+
+### Swap Toggle with ToggleHooks
+
+---
+
+<CodeSurferColumnLayout sizes={[1, 1]}>
+
+<Step title="Swap Toggle with ToggleHooks">
+  <Code
+    code={require('!!raw-loader!./App.js').default}
+    focus="2[23:28]"
+    lang="jsx"
+    subtitle="Before"
+  />
+  <Code
+    code={require('!!raw-loader!./AppHooks.js').default}
+    focus="2[23:33]"
+    lang="jsx"
+    subtitle="After"
+  />
+</Step>
+
+</CodeSurferColumnLayout>
+
+---
+
+### End User 🆗
+
+<ToggleHooks />
+
+---
+
+### Test User ✅
+
+<Split>
+  <Image
+    src={require('file-loader!./demo-2-test-result.png')}
+    style={{
+      margin: 'auto',
+      height: '40vh',
+      width: '40vw',
+      backgroundPosition: 'right',
+      backgroundSize: 'contain',
+    }}
+  />
+  <Image
+    src={require('file-loader!./demo-2-test-coverage.png')}
     style={{
       margin: '0 auto 0 0',
       height: '60vh',
