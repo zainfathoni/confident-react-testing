@@ -1,0 +1,71 @@
+import { Image } from '@mdx-deck/components'
+import { Split } from 'mdx-deck/layouts'
+import {
+  CodeSurferLayout,
+  CodeSurferColumnLayout,
+  Code,
+  Step,
+} from 'code-surfer'
+import Toggle from './Toggle.js'
+
+# Demo 3
+
+## Make a mistake in Button event propagation
+
+<Toggle />
+
+---
+
+<CodeSurferColumnLayout sizes={[1, 1]}>
+
+<Step>
+  <Code
+    code={require('!!raw-loader!./Button.js').default}
+    focus="6[12:48]"
+    lang="jsx"
+    title="Careful Developer 🧐"
+    subtitle="Pass onClick props correctly"
+  />
+  <Code
+    code={require('!!raw-loader!./ButtonMistake.js').default}
+    focus="6[12:19]"
+    lang="jsx"
+    title="Careless Developer 🥴"
+    subtitle="Forget to pass onClick props"
+  />
+</Step>
+
+</CodeSurferColumnLayout>
+
+---
+
+## Test User ✅
+
+<Split>
+  <Image
+    src={require('file-loader!./toggle-shallow-test-result.png')}
+    style={{
+      margin: 'auto',
+      height: '45vh',
+      width: '45vw',
+      backgroundPosition: 'right',
+      backgroundSize: 'contain',
+    }}
+  />
+  <Image
+    src={require('file-loader!./toggle-shallow-test-coverage.png')}
+    style={{
+      margin: '0 auto 0 0',
+      height: '60vh',
+      width: '60vw',
+      backgroundPosition: 'left',
+      backgroundSize: 'contain',
+    }}
+  />
+</Split>
+
+---
+
+## End User 😡
+
+<Toggle />
