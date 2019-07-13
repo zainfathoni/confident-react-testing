@@ -51,15 +51,36 @@ import { Appear, Image, Notes } from "mdx-deck";
 - Introducing [The Test User](https://kentcdodds.com/blog/avoid-the-test-user)
   - 3 users of our components:
     - End User --> user interactions, i18n, a11y, etc.
-    - Developer User --> props, context, side effects, etc.
-    - [The Test User](https://kentcdodds.com/blog/avoid-the-test-user) --> implementation details --> avoid it!
-- Walkthrough
-  - Test React using Enzyme
-  - Demonstrate common mistakes:
+    - Developer --> props, context, side effects, etc.
+    - [The Test User](https://kentcdodds.com/blog/avoid-the-test-user) --> ???
+- Demo 1
+  - Implement Class Component
+  - Test using Enzyme
+  - Change `toggle` state representation
+    - End User 🆗
+    - Developer 🆗
+    - Test User ❌
+- Demo 2
+  - Implement Functional Component (using Hooks)
+  - Swap Components
+    - End User 🆗
+    - Developer 🆗
+    - Test User ❌
+  - Emphasis common mistakes:
     - Assert component instance's state
     - Call component instance method directly
-  - Test React using React Testing Library
-  - Swap components <-- "aha" moment
+- Demo 3
+  - Test using React Testing Library
+  - Change `toggle` state representation
+    - End User 🆗
+    - Developer 🆗
+    - Test User ✅
+  - Swap components
+    - End User 🆗
+    - Developer 🆗
+    - Test User ✅
+  - Why?
+    - Avoid testing implementation details <-- "aha" moment
 - Recap
   - [The more your tests resemble the way your software is used, the more confidence they can give you.](https://twitter.com/kentcdodds/status/977018512689455106)
   - Avoid [testing implementation details](https://kentcdodds.com/blog/testing-implementation-details)
@@ -67,4 +88,6 @@ import { Appear, Image, Notes } from "mdx-deck";
     - Props
     - Rendered DOM
   - [What should (and should not) be mocked](https://kentcdodds.com/blog/the-merits-of-mocking)
-- Outro
+  - [Testing Trophy](https://kentcdodds.com/blog/unit-vs-integration-vs-e2e-tests)
+- Thanks
+  - [Testing JavaScript](https://testingjavascript.com/)
