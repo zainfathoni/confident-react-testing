@@ -9,7 +9,7 @@ import {
 
 # Comparison
 
-## Test Toggle using React Testing Library
+## Enzyme vs React Testing Library
 
 ---
 
@@ -122,3 +122,13 @@ import {
 </Step>
 
 </CodeSurferColumnLayout>
+
+---
+
+## Can't we do it using Enzyme?
+
+- Yes, we can! Use `mount` instead of `shallow`
+- Enzyme's API is too powerful ➡ Easy to make mistakes
+- React Testing Library's API is intentionally powerless
+  - Harder to make such mistakes
+  - Encourages good testing practices
