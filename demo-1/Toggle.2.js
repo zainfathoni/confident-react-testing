@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../Button'
+import Button from './Button'
 
 class Toggle extends React.Component {
   state = {
@@ -7,7 +7,9 @@ class Toggle extends React.Component {
   }
 
   handleToggle = () => {
-    this.setState({ toggle: !this.state.toggle })
+    this.setState({
+      toggle: !this.state.toggle,
+    })
   }
 
   render() {
