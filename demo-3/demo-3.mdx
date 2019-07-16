@@ -6,7 +6,7 @@ import {
   Code,
   Step,
 } from 'code-surfer'
-import Toggle from './ToggleMistake.js'
+import Toggle from '../ToggleMistake.js'
 
 # Demo 3
 
@@ -20,15 +20,15 @@ import Toggle from './ToggleMistake.js'
 
 <Step>
   <Code
-    code={require('!!raw-loader!./Button.js').default}
-    focus="6[12:48]"
+    code={require('!!raw-loader!../Button.js').default}
+    focus="7[15:42]"
     lang="jsx"
     title="Careful Developer 🧐"
     subtitle="Pass onClick props correctly"
   />
   <Code
-    code={require('!!raw-loader!./ButtonMistake.js').default}
-    focus="6[12:19]"
+    code={require('!!raw-loader!../ButtonMistake.js').default}
+    focus="7"
     lang="jsx"
     title="Careless Developer 🥴"
     subtitle="Forget to pass onClick props"

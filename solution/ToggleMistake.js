@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from './ButtonMistake'
+import Button from '../ButtonMistake'
 
 class Toggle extends React.Component {
   state = {
