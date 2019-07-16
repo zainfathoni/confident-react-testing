@@ -1,9 +1,9 @@
 import React from 'react'
-import Button from '../Button'
+import Button from './Button'
 
 class Toggle extends React.Component {
   state = {
-    toggle: false,
+    toggle: true,
   }
 
   handleToggle = () => {
@@ -13,7 +13,7 @@ class Toggle extends React.Component {
   render() {
     return (
       <div>
-        <span>{this.state.toggle ? 'On' : 'Off'}</span>
+        <span>{!this.state.toggle ? 'On' : 'Off'}</span>
         <Button onClick={this.handleToggle}>Toggle</Button>
       </div>
     )

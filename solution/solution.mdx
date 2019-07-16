@@ -6,7 +6,7 @@ import {
   Code,
   Step,
 } from 'code-surfer'
-import ToggleFlipped from './ToggleFlipped.js'
+import ToggleFlipped from '../ToggleFlipped.js'
 import ToggleHooks from './ToggleHooks.js'
 import ToggleMistake from './ToggleMistake.js'
 
@@ -98,20 +98,32 @@ import ToggleMistake from './ToggleMistake.js'
 
 <CodeSurferColumnLayout sizes={[1, 1]}>
 
-<Step>
+<Step title="Flip toggle State Representation">
   <Code
-    code={require('!!raw-loader!./Toggle.js').default}
-    focus="6[13:17],16[15:48]"
+    code={require('!!raw-loader!../Toggle.js').default}
+    focus="6[13:17]"
     lang="jsx"
-    title="Flip toggle State Representation"
-    subtitle="true ➡ On | false ➡ Off"
+    subtitle="default ➡️ true"
   />
   <Code
-    code={require('!!raw-loader!./ToggleFlipped.js').default}
-    focus="6[13:16],16[16]"
+    code={require('!!raw-loader!../ToggleFlipped.js').default}
+    focus="6[13:16]"
     lang="jsx"
-    title="Flip toggle State Representation"
-    subtitle="true ➡ Off | false ➡ On"
+    subtitle="default ➡️ false"
+  />
+</Step>
+<Step>
+  <Code
+    code={require('!!raw-loader!../Toggle.js').default}
+    focus="16[16:47]"
+    lang="jsx"
+    subtitle="true ➡️ On | false ➡️ Off"
+  />
+  <Code
+    code={require('!!raw-loader!../ToggleFlipped.js').default}
+    focus="16[16:48]"
+    lang="jsx"
+    subtitle="true ➡️ Off | false ➡️ On"
   />
 </Step>
 
