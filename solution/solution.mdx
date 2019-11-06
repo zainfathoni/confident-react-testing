@@ -6,19 +6,17 @@ import {
   Code,
   Step,
 } from 'code-surfer'
-import ToggleFlipped from '../ToggleFlipped.js'
 import ToggleHooks from '../ToggleHooks.js'
 import ToggleMistake from '../ToggleMistake.js'
 
-# Enzyme Demo Recap
+# Enzyme
 
-| Demos  | End User 🙋🏻‍♂️ | Developer 👨🏻‍💻 | Test User 🧪 |
-| ------ | :---------: | :----------: | :----------: |
-| Demo 1 |     🆗      |      🆗      |      ❌      |
-| Demo 2 |     🆗      |      🆗      |      ❌      |
-| Demo 3 |     😡      |      🆗      |      ✅      |
+| Cases          | End User 🙋🏻‍♂️ | Developer 👨🏻‍💻 | Test User 🧪 |
+| -------------- | :---------: | :----------: | :----------: |
+| False Negative |     🆗      |      🆗      |      ❌      |
+| False Positive |     😡      |      💡      |      ✅      |
 
-⚠️ Test Users ≠ End Users
+⚡️ Test Users ≠ End Users ⚡️
 
 ---
 
@@ -94,91 +92,13 @@ import ToggleMistake from '../ToggleMistake.js'
 
 ---
 
-## Let's redo all our previous Demos!
+## Let's revisit our previous cases!
 
 ---
 
-## Demo 1
+## False Negative
 
-### Flip `toggle` State Representation
-
-`true` ➡ Off
-
-`false` ➡ On
-
----
-
-<CodeSurferColumnLayout sizes={[1, 1]}>
-
-<Step title="Flip toggle State Representation">
-  <Code
-    code={require('!!raw-loader!../Toggle.js').default}
-    focus="6[13:17]"
-    lang="jsx"
-    subtitle="default ➡️ true"
-  />
-  <Code
-    code={require('!!raw-loader!../ToggleFlipped.js').default}
-    focus="6[13:16]"
-    lang="jsx"
-    subtitle="default ➡️ false"
-  />
-</Step>
-<Step>
-  <Code
-    code={require('!!raw-loader!../Toggle.js').default}
-    focus="19:21"
-    lang="jsx"
-    subtitle="true ➡️ On | false ➡️ Off"
-  />
-  <Code
-    code={require('!!raw-loader!../ToggleFlipped.js').default}
-    focus="19:21"
-    lang="jsx"
-    subtitle="true ➡️ Off | false ➡️ On"
-  />
-</Step>
-
-</CodeSurferColumnLayout>
-
----
-
-### End User 🆗
-
-<ToggleFlipped />
-
----
-
-### Test User ✅
-
-<Split>
-  <Image
-    src={require('file-loader!./demo-1-test-result.png')}
-    style={{
-      margin: 'auto',
-      height: '40vh',
-      width: '40vw',
-      backgroundPosition: 'right',
-      backgroundSize: 'contain',
-    }}
-  />
-  <Image
-    src={require('file-loader!./demo-1-test-coverage.png')}
-    style={{
-      margin: '0 auto 0 0',
-      height: '60vh',
-      width: '60vw',
-      backgroundPosition: 'left',
-      backgroundSize: 'contain',
-    }}
-  />
-</Split>
-
----
-
-## Demo 2
-
-### Swap Toggle with ToggleHooks
+### Refactoring Class to Function
 
 ---
 
@@ -236,7 +156,7 @@ import ToggleMistake from '../ToggleMistake.js'
 
 ---
 
-## Demo 3
+## False Positive
 
 ### Make a mistake in Button event propagation
 
@@ -298,12 +218,11 @@ import ToggleMistake from '../ToggleMistake.js'
 
 ---
 
-# React Testing Library Demo Recap
+# React Testing Library
 
-| Demos  | End User 🙋🏻‍♂️ | Developer 👨🏻‍💻 | Test User 🧪 |
-| ------ | :---------: | :----------: | :----------: |
-| Demo 1 |     🆗      |      🆗      |      ✅      |
-| Demo 2 |     🆗      |      🆗      |      ✅      |
-| Demo 3 |     😡      |      💡      |      ❌      |
+| Cases              | End User 🙋🏻‍♂️ | Developer 👨🏻‍💻 | Test User 🧪 |
+| ------------------ | :---------: | :----------: | :----------: |
+| ~~False Negative~~ |     🆗      |      🆗      |      ✅      |
+| ~~False Positive~~ |     😡      |      💡      |      ❌      |
 
-🎉 Test Users = End Users
+🎉 Test Users = End Users 🎉

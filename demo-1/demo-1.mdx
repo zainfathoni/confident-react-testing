@@ -7,11 +7,10 @@ import {
   Step,
 } from 'code-surfer'
 import Toggle from '../Toggle.js'
-import ToggleFlipped from '../ToggleFlipped.js'
 
-# Demo 1
+# False Negative
 
-## Implement Toggle Class Component
+## Refactoring Class to Function
 
 <Toggle />
 
@@ -19,40 +18,58 @@ import ToggleFlipped from '../ToggleFlipped.js'
 
 <CodeSurferLayout>
   <Code
-    code={require('!!raw-loader!./Toggle.0.js').default}
+    code={
+      require('!!raw-loader!./Toggle.0.js')
+        .default
+    }
     lang="jsx"
     title="Implement Toggle Class Component"
   />
   <Code
-    code={require('!!raw-loader!./Toggle.1.js').default}
+    code={
+      require('!!raw-loader!./Toggle.1.js')
+        .default
+    }
     focus="5:7"
     lang="jsx"
     title="Implement Toggle Class Component"
     subtitle="toggle state"
   />
   <Code
-    code={require('!!raw-loader!./Toggle.2.js').default}
+    code={
+      require('!!raw-loader!./Toggle.2.js')
+        .default
+    }
     focus="9:13"
     lang="jsx"
     title="Implement Toggle Class Component"
     subtitle="handleToggle function to switch the toggle"
   />
   <Code
-    code={require('!!raw-loader!./Toggle.3.js').default}
+    code={
+      require('!!raw-loader!./Toggle.3.js')
+        .default
+    }
     focus="18:22"
     lang="jsx"
     title="Implement Toggle Class Component"
     subtitle="Render toggle state"
   />
   <Code
-    code={require('!!raw-loader!../Toggle.js').default}
+    code={
+      require('!!raw-loader!../Toggle.js')
+        .default
+    }
     focus="23:27"
     lang="jsx"
     title="Implement Toggle Class Component"
     subtitle="Call handleToggle function"
   />
   <Code
-    code={require('!!raw-loader!../Toggle.js').default}
+    code={
+      require('!!raw-loader!../Toggle.js')
+        .default
+    }
     focus="5:7,9:13,18:22,23:27"
     lang="jsx"
     title="Implement Toggle Class Component"
@@ -67,54 +84,78 @@ import ToggleFlipped from '../ToggleFlipped.js'
 
 <CodeSurferLayout>
   <Code
-    code={require('!!raw-loader!./Toggle.test.0.js').default}
+    code={
+      require('!!raw-loader!./Toggle.test.0.js')
+        .default
+    }
     lang="jsx"
     title="Test Toggle using Enzyme"
   />
   <Code
-    code={require('!!raw-loader!./Toggle.test.1.js').default}
+    code={
+      require('!!raw-loader!./Toggle.test.1.js')
+        .default
+    }
     focus="1[21:27],10"
     lang="jsx"
     title="Test Toggle using Enzyme"
     subtitle="Shallow rendering"
   />
   <Code
-    code={require('!!raw-loader!./Toggle.test.2.js').default}
+    code={
+      require('!!raw-loader!./Toggle.test.2.js')
+        .default
+    }
     focus="12"
     lang="jsx"
     title="Test Toggle using Enzyme"
     subtitle="Assert initial state"
   />
   <Code
-    code={require('!!raw-loader!./Toggle.test.3.js').default}
+    code={
+      require('!!raw-loader!./Toggle.test.3.js')
+        .default
+    }
     focus="13"
     lang="jsx"
     title="Test Toggle using Enzyme"
     subtitle="Assert initial props passed down to Button"
   />
   <Code
-    code={require('!!raw-loader!./Toggle.test.4.js').default}
+    code={
+      require('!!raw-loader!./Toggle.test.4.js')
+        .default
+    }
     focus="15"
     lang="jsx"
     title="Test Toggle using Enzyme"
     subtitle="Call function to update the state"
   />
   <Code
-    code={require('!!raw-loader!./Toggle.test.5.js').default}
+    code={
+      require('!!raw-loader!./Toggle.test.5.js')
+        .default
+    }
     focus="17"
     lang="jsx"
     title="Test Toggle using Enzyme"
     subtitle="Assert updated state"
   />
   <Code
-    code={require('!!raw-loader!../Toggle.test.js').default}
+    code={
+      require('!!raw-loader!../Toggle.test.js')
+        .default
+    }
     focus="18"
     lang="jsx"
     title="Test Toggle using Enzyme"
     subtitle="Assert updated props passed down to Button"
   />
   <Code
-    code={require('!!raw-loader!../Toggle.test.js').default}
+    code={
+      require('!!raw-loader!../Toggle.test.js')
+        .default
+    }
     focus="1[21:27],10,12:13,15,17:18"
     lang="jsx"
     title="Test Toggle using Enzyme"
@@ -138,103 +179,6 @@ import ToggleFlipped from '../ToggleFlipped.js'
   />
   <Image
     src={require('file-loader!./toggle-shallow-test-coverage.png')}
-    style={{
-      margin: '0 auto 0 0',
-      height: '60vh',
-      width: '60vw',
-      backgroundPosition: 'left',
-      backgroundSize: 'contain',
-    }}
-  />
-</Split>
-
----
-
-## Flip `toggle` State Representation
-
-`true` ➡ Off
-
-`false` ➡ On
-
----
-
-<CodeSurferColumnLayout sizes={[1, 1]}>
-
-<Step title="Flip toggle State Representation">
-  <Code
-    code={require('!!raw-loader!../Toggle.js').default}
-    focus="6[13:17]"
-    lang="jsx"
-    subtitle="default ➡️ true"
-  />
-  <Code
-    code={require('!!raw-loader!../ToggleFlipped.js').default}
-    focus="6[13:16]"
-    lang="jsx"
-    subtitle="default ➡️ false"
-  />
-</Step>
-<Step>
-  <Code
-    code={require('!!raw-loader!../Toggle.js').default}
-    focus="19:21"
-    lang="jsx"
-    subtitle="true ➡️ On | false ➡️ Off"
-  />
-  <Code
-    code={require('!!raw-loader!../ToggleFlipped.js').default}
-    focus="19:21"
-    lang="jsx"
-    subtitle="true ➡️ Off | false ➡️ On"
-  />
-</Step>
-
-</CodeSurferColumnLayout>
-
----
-
-## End User 🆗
-
-<ToggleFlipped />
-
----
-
-<CodeSurferColumnLayout sizes={[1, 1]}>
-
-<Step title="Developer 🆗">
-  <Code
-    code={require('!!raw-loader!./App.js').default}
-    focus="2,5[10:19]"
-    lang="jsx"
-    subtitle="Before"
-  />
-  <Code
-    code={require('!!raw-loader!./App.js').default}
-    focus="2,5[10:19]"
-    lang="jsx"
-    subtitle="After"
-  />
-</Step>
-
-</CodeSurferColumnLayout>
-
----
-
-## Test User ❌
-
-<Split>
-  <Image
-    src={require('file-loader!./toggle-shallow-test-failure-result.png')}
-    style={{
-      margin: 'auto',
-      height: '55vh',
-      width: '55vw',
-      backgroundPosition: 'right',
-      backgroundSize: 'contain',
-    }}
-  />
-  <Image
-    src={require('file-loader!./toggle-shallow-test-failure-coverage.png')}
     style={{
       margin: '0 auto 0 0',
       height: '60vh',
