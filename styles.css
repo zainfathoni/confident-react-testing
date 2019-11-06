@@ -1,0 +1,14 @@
+h1,
+h2,
+h3,
+h4,
+ul,
+th,
+td,
+a,
+del,
+p,
+.cs-title > span,
+.cs-subtitle > span {
+  font-family: 'Nunito', system-ui, sans-serif;
+}
