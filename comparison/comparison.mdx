@@ -1,3 +1,4 @@
+import { Appear } from 'mdx-deck'
 import { Image } from '@mdx-deck/components'
 import { Split } from 'mdx-deck/layouts'
 import {
@@ -127,8 +128,30 @@ import {
 
 ## Can't we do it using Enzyme?
 
-- Yes, we can! Use `mount` instead of `shallow`
-- Enzyme's API is too powerful ➡ Easy to make mistakes
-- React Testing Library's API is intentionally powerless
-  - Harder to make such mistakes
-  - Encourages good testing practices
+<ul>
+  <Appear>
+    <li>
+      Yes, we can!
+      <br />
+      Use <strong>mount</strong> instead of <strong>shallow</strong>
+    </li>
+    <li>
+      Enzyme's API is too powerful
+      <br />
+      ➡ Easy to make mistakes
+    </li>
+    <li>
+      React Testing Library's API is
+      intentionally powerless
+      <ul>
+        <li>
+          Harder to make such mistakes
+        </li>
+        <li>
+          Encourages good testing
+          practices
+        </li>
+      </ul>
+    </li>
+  </Appear>
+</ul>
